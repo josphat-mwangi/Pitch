@@ -5,4 +5,7 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 
-from app import views
+# Initializing Flask Extensions
+bootstrap = Bootstrap(app)
+
+from app import views,error
