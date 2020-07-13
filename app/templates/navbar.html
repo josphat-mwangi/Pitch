@@ -1,31 +1,24 @@
-<div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"> Pitch </a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Category
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bar.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+{% endblock %}
+    <div class="container">
+        <nav class="navbar">
+            <div class="dots-btn">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-1"></div>
+                <div class="dot dot-1"></div>
+            </div>
+            
 
+            <div class="nav-menu">
+                <a href="" class="nav-menu-link"><i class="fa fa-home"></i></a>
+                <a href="" class="nav-menu-link"><i class="fa fa-blogger"></i></a>
+                <a href="" class="nav-menu-link"><i class="fa fa-project-diagram"></i></a>
+                <a href="" class="nav-menu-link"><i class="fa fa-address-card"></i></a>
+        
+            </div>
+        </nav>
     </div>
-</div>
+

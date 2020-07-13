@@ -4,7 +4,7 @@ from config import config_options
 
 
 # Initializing Flask Extensions
-bootstrap = Bootstrap(app)
+bootstrap = Bootstrap()
 
 
 # Instializing appilication
@@ -18,6 +18,7 @@ def create_app(config_name):
     bootstrap.init_app(app)
 
     # Registering the blueprint
+
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
@@ -26,4 +27,3 @@ def create_app(config_name):
     return app
 
 
-from app import views,error
