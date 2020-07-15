@@ -1,24 +1,16 @@
 {% block styles %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/navbar.css') }}">
+    <link rel="script" type="text/js" href="{{ url_for('static',filename='js/script.js') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 {% endblock %}
-    <div class="container">
-        <nav class="navbar">
-            <div class="dots-btn">
-                <div class="dot dot-1"></div>
-                <div class="dot dot-1"></div>
-                <div class="dot dot-1"></div>
-            </div>
-            
-
-            <div class="nav-menu">
-                <a href="" class="nav-menu-link"><i class="fa fa-home"></i></a>
-                <a href="" class="nav-menu-link"><i class="fa fa-blogger"></i></a>
-                <a href="" class="nav-menu-link"><i class="fa fa-project-diagram"></i></a>
-                <a href="" class="nav-menu-link"><i class="fa fa-address-card"></i></a>
-        
-            </div>
-        </nav>
-    </div>
-
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
+<nav class="menu">
+    <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>

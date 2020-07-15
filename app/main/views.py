@@ -1,4 +1,6 @@
 from flask import render_template
+from flask_login import login_required
+from ..models import User,Pitch,Comment,Upvotes,Downvotes
 from . import main
 
 # Views
