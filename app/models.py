@@ -19,7 +19,7 @@ class User(UserMixin,db.Model):
     pitches = db.relationship('Pitches', backref='user', lazy='dynamic')
     comments = db.relationship('Comment', backref='user', lazy="dynamic")
     pass_secure = db.Column(db.String(255))
-    image_file = db.Column(db.String(20),nullable=False,default='default.jpg')
+    profile_pic_path = db.Column(db.String(),nullable=False,default='default.jpg')
 
     @property
     def password(self):
@@ -88,7 +88,7 @@ class Downvotes(db.Model):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return.User.query.get(user_id)
+    return User.query.get(user_id)
 
 
 

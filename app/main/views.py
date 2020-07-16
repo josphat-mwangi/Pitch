@@ -12,3 +12,8 @@ def index():
     '''
     title = 'Welcome to Pitch'
     return render_template('index.html',title=title)
+
+# @main.route('/add_new',methods = ['GET','POST'])
+# @login_required
+# def new_pitch():
+
