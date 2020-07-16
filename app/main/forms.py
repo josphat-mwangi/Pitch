@@ -15,4 +15,4 @@ class FormComments(FlaskForm):
 
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Write a brief bio about you.',validators = [Required()])
-    submit = SubmitField('Save')
+    submit = SubmitField('Submit')
