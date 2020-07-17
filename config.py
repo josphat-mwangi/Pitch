@@ -7,6 +7,8 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://josphat:nevergiveup@localhost/pitch'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
+    UPLOAD_PHOTOS_DEST ='app/static/photos'
+
 
 
 
