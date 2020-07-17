@@ -5,9 +5,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     
 {% endblock %}
-<!-- <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
 
-<div class="menu-wrap">
+<!-- <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger">
         <div></div>
@@ -17,10 +17,19 @@
             <div>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul> -->
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+                    <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                    {% else %}
+                    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                    {%endif%}
                 </ul>
+<!-- 
             </div>
         </div>
     </div>
@@ -29,24 +38,13 @@
 <header class="showcase">
     <div class="container showcase-inner">
         <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores sint impedit delectus quam
-            molestiae explicabo cum facere ratione veritatis.</p>
-        <a href="#" class="btn">Read More</a>
+        <p>TO PITCH WEBSITE.
+            1 minute can make or break you.
+        </p>
+        
     </div>
 </header>
 
-    
-            <!-- <ul class="nav navbar-nav navbar-right">
-                {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
-                {% else %}
-                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-                {%endif%}
-            </ul> -->
-    
-      
      -->
-
-   
+             
 
