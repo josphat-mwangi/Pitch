@@ -3,12 +3,10 @@ from wtforms import StringField,TextAreaField,SubmitField,SelectField
 from wtforms.validators import Required
 
 
-class PitchForm(FlaskForm):
 
-    title = StringField('title',validators=[Required()])
-    category = SelectField('Category', choices=[('Interviews','Interviewss'),('Promotion','Promotion'),('Adv','Advertisement'),('Technology','Technology')],validators=[Required()])
-    post = TextAreaField('Your Pitch', validators=[Required()])
-    submit = SubmitField('Pitch')
+class PitchForm(FlaskForm):
+    content = TextAreaField('Post your Pitch', validators=[Required()])
+    submit = SubmitField('Submit')
 class CommentForm(FlaskForm):
     comment = TextAreaField('Leave a comment',validators=[Required()])
     submit = SubmitField('Comment')
@@ -16,3 +14,8 @@ class CommentForm(FlaskForm):
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Write a brief bio about you.',validators = [Required()])
     submit = SubmitField('Save')
+
+class CategoryForm(FlaskForm):
+    name = StringField('Category Name',validators=[Required()])
+    submit = SubmitField('Create')
+
