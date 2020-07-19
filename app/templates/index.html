@@ -1,43 +1,47 @@
-{% extends 'base.html'%}
-{% import 'macros.html' as macro%}
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Styles block -->
 
-<head>
-    <meta charset="utf-8">
-    {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> Welcome to the best Pitches app </title>
-    {% endif %}
-</head>
+{%block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" <link
+    href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{%endblock%}
+<!-- Content block -->
+{%block content%}
+<div class="jumbotron text-center"
+    style="background-color: #E63462; color: #fff; padding: 55px 25px; font-family: 'Monoton', cursive;">
+    <h1>One Minute Pitch</h1>
+</div>
+<div class="container" style="padding-bottom: 20px;">
+    <a href="{{url_for('main.new_pitch')}}" class="btn btn-success">Create pitch</a>
+</div>
 
-<body>
-
-    {% block content %}
-    <br>
-    <div class="container">
-        <div class="text-align-center text-center">
-            <div>
-                <h4>
-                    <a class="btn btn-primary" href="/add/category">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add a category</a>
-                </h4>
-                <ol class="category-list list-inline-item">
-                    {{macro.displayCategorylist(categories)}}
-                </ol>
+<div class="container" style="font-family: 'Cormorant Upright', serif;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3>Interview Pitches</h3>
+                <p>Want to ace an interview in just a few words, welcome.</p>
+                <a href="{{url_for('main.interview_pitches')}}" class="btn btn-primary -center">View</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3>Product Pitches</h3>
+                <p>Want to talk about your products, you're in the right place.</p>
+                <a href="{{url_for('main.product_pitches')}}" class="btn btn-primary -center">View</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3>Promotion Pitches</h3>
+                <p>Want to promote anything, step right up and begin.</p>
+                <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-primary -center">View</a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="jumbotron">
-            <h3 class="text-center">All Pitches</h3>
-            <hr class="my-4">
-            <div class="col-md-8 ml-md-auto">
-                <p class="lead"> {{macro.displayAllPitches(all_pitches)}} </p>
-            </div>
-            <hr class="my-4">
-        </div>
-    </div>
-    {% endblock %}
-</body>
+</div>
+{%endblock%}

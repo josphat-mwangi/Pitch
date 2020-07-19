@@ -22,7 +22,7 @@ mail = Mail()
 # photos = UploadSet('photos',IMAGES)
 # Instializing appilication
 def create_app(config_name):
-    app = Flask(__name__)
+    app = Flask(__name__, instance_relative_config=False)
     mail.init_app(app)
 
 
