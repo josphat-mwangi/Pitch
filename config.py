@@ -4,7 +4,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://josphat:nevergiveup@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://josphat:nevergiveup@localhost/minuteone'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     UPLOAD_PHOTOS_DEST ='app/static/photos'

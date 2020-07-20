@@ -1,0 +1,16 @@
+.jumbotron {
+    background-image: url(../images/images.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: royalblue;
+
+}
+.container{
+    background-image: url(../images/images\ \(1\).jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    
+}
