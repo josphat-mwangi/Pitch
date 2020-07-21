@@ -17,14 +17,13 @@ login_manager.login_view = 'auth.login'
 # Initializing Flask Extensions
 bootstrap = Bootstrap()
 db = SQLAlchemy()
-mail = Mail()
+
 
 # photos = UploadSet('photos',IMAGES)
 # Instializing appilication
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=False)
-    mail.init_app(app)
-
+   
 
     # configure Uploadset
     # configure_uploads(app,photos)

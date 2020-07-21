@@ -7,6 +7,8 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
+    print(SQLALCHEMY_DATABASE_URI,"job", SECRET_KEY)
+
     UPLOAD_PHOTOS_DEST ='app/static/photos'
 
     #  email configurations
@@ -20,6 +22,7 @@ class Config:
 
 
 class ProdConfig(Config):
+    DEBUG = False
     '''
     Production  configuration child class
 
